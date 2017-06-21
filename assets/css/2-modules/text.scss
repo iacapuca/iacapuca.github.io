@@ -1,0 +1,55 @@
+.nugget-small{
+  font-size: 2.35em;
+}
+.nugget{
+  font-family: $type-font;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 45px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+.text-light-gray{
+  color: #8990A1;
+}
+
+.intro-text{
+  font-size: 20px;
+  line-height: 32px;
+  width: auto;
+}
+
+.text-medium-gray{
+  color: #687173;
+}
+
+.text-white{
+  color:#fff;
+}
+
+.txt-center{
+  display: flex;
+  justify-content: center;
+}
+
+.title-hover{
+  margin: 0 auto 30px auto;
+  width: 200px;
+  text-align: center;
+}
+
+.divider-white{
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  height: 3px;
+  width: 55px;
+}
+
+.tags-hover{
+  margin: 30px auto 0 auto;
+  width: 220px;
+  text-align: center;
+  text-transform: capitalize;
+}

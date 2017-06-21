@@ -1,0 +1,99 @@
+
+.profile-card {
+    background: #FFFFFF;
+    width: 280px;
+    height: 440px;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: 70px;
+    h1,
+    h2 {
+        font-weight: 500;
+        margin: 0 0 5px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    p {
+        margin: 0;
+    }
+    .card-header {
+        width: auto;
+        height: auto;
+        text-align: center;
+        float: none;
+        padding: 30px 20px;
+        display: block;
+        margin-top: -20px;
+        border-right: none;
+        background: #FFFFFF;
+        h1 {
+            color: #FF5722;
+        }
+        a {
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            margin: 25px 30px;
+            img {
+                width: 120px;
+                max-width: 100%;
+                border-radius: 50%;
+                transition: box-shadow 0.3s ease;
+                box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.06);
+            }
+        }
+
+        a:hover img {
+            box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+    }
+    ul.social-links {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        background: #FFFFFF;
+        padding-left: 0px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    ul.social-links li {
+        list-style: none;
+        margin: -5px 0 0;
+        width: 25%;
+        text-align: center;
+        a {
+            display: inline-block;
+            color: red;
+            width: 24px;
+            height: 24px;
+            padding: 6px;
+            position: relative;
+            overflow: hidden!important;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            i {
+                position: relative;
+                z-index: 1;
+            }
+            img,
+            svg {
+                width: 24px;
+            }
+        }
+    }
+    .profile-bio {
+        width: auto;
+        height: auto;
+        padding: 15px 20px 30px;
+        background: #FFFFFF;
+        display: block;
+        float: none;
+        color: #333333;
+        text-align: center;
+    }
+}

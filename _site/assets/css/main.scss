@@ -1,0 +1,19 @@
+@import "0-tools/normalize";
+@import "0-tools/bourbon/bourbon";
+@import "0-tools/syntax";
+@import "0-tools/neat/neat";
+
+@import "1-base/vars";
+@import "1-base/base";
+
+@import "2-modules/header";
+@import "2-modules/hero";
+@import "2-modules/card";
+@import "2-modules/projects";
+@import "2-modules/arrow";
+@import "2-modules/text";
+@import "2-modules/skills";
+
+@import "3-layouts/section.scss";
+@import "3-layouts/background.scss";
+@import "3-layouts/footer.scss";

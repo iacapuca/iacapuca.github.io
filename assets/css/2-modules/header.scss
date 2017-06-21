@@ -1,0 +1,157 @@
+
+@import "0-tools/bourbon/bourbon";
+$headerBg: #fff;
+$naviconFg: #e6e6e6;
+$listItemFg: #fd6b58;
+$listItemBg: white;
+$listItemBgHov:#e6e6e6;
+
+header {
+    width: 100%;
+    background-color: #fff;
+}
+
+nav.site-nav {
+    padding: 0.9em 0;
+    @media screen and (max-width: 710px) {
+      padding: 0;
+    }
+    ul.nav-list {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        list-style: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        //flex-shrink: 0;
+        justify-content: center;
+        @media screen and (max-width: 710px) {
+            display: none;
+        }
+        li.menu__item {
+            display: block;
+            .menu__item--current {
+                color: #d94f5c;
+                -webkit-transition: color 0.5s;
+                transition: color 0.5s;
+            }
+            a.menu__link {
+                height: 3em;
+                text-align: center;
+                color: #b5b5b5;
+                -webkit-transition: color 0.3s;
+                transition: color 0.3s;
+                padding: 1em;
+                font-size: 1.05em;
+                font-weight: 600;
+                display: block;
+                text-decoration: none;
+                padding: 1em;
+                cursor: pointer;
+                user-select: none;
+                &:focus,
+                &:hover {
+                    color: #929292;
+                    outline: none;
+                }
+                &::before {}
+            }
+        }
+    }
+  }
+
+
+// The menu controlled by the burger
+.burger-input {
+  display: none;
+  @media screen and (max-width: 710px) {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  position: absolute;
+  + label {
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    &:after,
+    &:before,
+    .burger {
+      content: '';
+      width: 25px;
+      height: 4px;
+      display: block;
+      margin: 3px auto;
+      border-radius: 3px;
+      background-color: $naviconFg;
+      @include transition(all 200ms ease-in-out);
+    }
+  }
+
+  &:checked {
+    + label {
+      top: 4px;
+      &:before {
+        @include transform(translateY(2px) rotate(135deg));
+      }
+      &:after {
+        @include transform(translateY(-12px) rotate(-135deg));
+      }
+      .burger {
+        @include transform(scale(0));
+      }
+    }
+    ~ nav.mobile-list {
+      display: block;
+      li {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+}
+
+
+
+// Navigation styles
+nav.mobile-list {
+  display: none;
+}
+
+ul.nav-mobile {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  list-style: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  //flex-shrink: 0;
+  justify-content: center;
+  a {
+    display: block;
+    padding: 10px 0;
+    color: $listItemFg;
+    &:hover {
+      background-color: $listItemBgHov;
+      @include transition(background-color 250ms ease-in-out);
+    }
+  }
+}

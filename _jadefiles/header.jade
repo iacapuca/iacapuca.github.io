@@ -1,0 +1,16 @@
+mixin nav-content()
+  li.menu__item: a.menu__link(href="#projetos") Projetos
+  li.menu__item: a.menu__link(href="#conhecimento") Conhecimento
+  li.menu__item: a.menu__link(href="#contato") Contato
+
+header
+  section
+    nav.site-nav
+      ul.nav-list
+        +nav-content()
+    input.burger-input(type="checkbox", id="click")
+    label(for="click")
+      .burger
+    nav.mobile-list
+      ul.nav-mobile
+        +nav-content()
